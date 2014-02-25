@@ -7,3 +7,4 @@ Current config files
 --------------------
 
 * .tmux.conf - tmux configuration
+* .vimrc     - vim configuration
