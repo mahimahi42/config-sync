@@ -9,6 +9,7 @@ setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
+#username@hostname pwd prompt
 PROMPT="%n@%M %~ %# "
 
 #aliases
