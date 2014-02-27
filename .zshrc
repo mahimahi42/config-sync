@@ -13,3 +13,4 @@ PROMPT="%n@%M %~ %# "
 
 #aliases
 alias ip="curl icanhazip.com"
+alias ifconfig="/sbin/ifconfig"
