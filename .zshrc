@@ -39,7 +39,7 @@ export PATH=/usr/local/apache-maven-3.1.1/bin:$PATH
 export ANT_HOME=/usr/share/ant
 export PATH=$ANT_HOME/bin:$PATH
 alias nano="nano -c"
-alias ip="curl icanhazip.com"
+alias ipaddr="curl icanhazip.com"
 alias ifconfig="/sbin/ifconfig"
 alias ls="ls -la --color=auto"
 alias grep="grep --color=auto"
