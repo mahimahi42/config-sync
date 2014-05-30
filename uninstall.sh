@@ -2,8 +2,10 @@
 
 TMUX=.tmux.conf
 VIM=.vimrc
+ZSH=.zshrc
 TMUX_DIR=~/$TMUX
 VIM_DIR=~/$VIM
+ZSH_DIR=~/$ZSH
 BAK_DIR=~/config-backup
 
 # Helpful message if file isn't found
@@ -31,18 +33,29 @@ else
     skip ".vimrc"
 fi
 
+# Uninstall zsh config
+if [ -e $ZSH_DIR ]; then
+    rm $ZSH_DIR
+else
+    skip ".zshrc"
+fi
+
 # Reinstall backed up configs
 # If we have no backups, exit, otherwise restore them
 if [ ! -d $BAK_DIR ]; then
     exit
 fi
 
-if [ -e $BAK_DIR/$TMUX]; then
+if [ -e $BAK_DIR/$TMUX ]; then
     mv $BAK_DIR/$TMUX ~
 fi
 
-if [ -e $BAK_DIR/$VIM]; then
+if [ -e $BAK_DIR/$VIM ]; then
     mv $BAK_DIR/$VIM ~
+fi
+
+if [ -e $BAK_DIR/$ZSH ]; then
+    mv $BAK_DIR/$ZSH ~
 fi
 
 rm -rf $BAK_DIR
