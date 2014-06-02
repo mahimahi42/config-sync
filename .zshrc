@@ -1,6 +1,10 @@
-###################
-# ZSH Configuration
-###################
+########################
+# ZSH Configuration File
+# Author: Bryce Davis
+# Created: May 30, 2014
+# Updated: June 2, 2014
+# License: MIT
+#######################
 
 # Prompt
 PROMPT="%B%F{red}%n@%M%f %F{blue}%~%f %F{green}λ%f %b"
