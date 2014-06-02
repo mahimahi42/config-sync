@@ -3,10 +3,10 @@
 TMUX=.tmux.conf
 VIM=.vimrc
 ZSH=.zshrc
-TMUX_DIR=~/$TMUX
-VIM_DIR=~/$VIM
-ZSH_DIR=~/$ZSH
-BAK_DIR=~/config-backup
+TMUX_DIR=$HOME/$TMUX
+VIM_DIR=$HOME/$VIM
+ZSH_DIR=$HOME/$ZSH
+BAK_DIR=$HOME/config-backup
 
 # Helpful message if file isn't found
 skip () {
@@ -23,21 +23,21 @@ fi
 if [ -e $TMUX_DIR ]; then
     rm $TMUX_DIR
 else
-    skip ".tmux.conf"
+    skip $TMUX 
 fi
 
 # Uninstall vim config
 if [ -e $VIM_DIR ]; then
     rm $VIM_DIR
 else
-    skip ".vimrc"
+    skip $VIM
 fi
 
 # Uninstall zsh config
 if [ -e $ZSH_DIR ]; then
     rm $ZSH_DIR
 else
-    skip ".zshrc"
+    skip $ZSH
 fi
 
 # Reinstall backed up configs
@@ -47,16 +47,16 @@ if [ ! -d $BAK_DIR ]; then
 fi
 
 if [ -e $BAK_DIR/$TMUX ]; then
-    mv $BAK_DIR/$TMUX ~
+    mv $BAK_DIR/$TMUX $HOME
 fi
 
 if [ -e $BAK_DIR/$VIM ]; then
-    mv $BAK_DIR/$VIM ~
+    mv $BAK_DIR/$VIM $HOME
 fi
 
 if [ -e $BAK_DIR/$ZSH ]; then
-    mv $BAK_DIR/$ZSH ~
+    mv $BAK_DIR/$ZSH $HOME
 fi
 
 rm -rf $BAK_DIR
-rm ${HOME}/.uninstall_scripts
+rm $HOME/.uninstall_scripts
