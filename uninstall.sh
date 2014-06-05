@@ -59,4 +59,4 @@ if [ -e $BAK_DIR/$ZSH ]; then
 fi
 
 rm -rf $BAK_DIR
-rm $HOME/.uninstall_configs_
+rm $HOME/.uninstall_configs
