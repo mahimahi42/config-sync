@@ -6,7 +6,7 @@ ZSH=.zshrc
 TMUX_DIR=$HOME/$TMUX
 VIM_DIR=$HOME/$VIM
 ZSH_DIR=$HOME/$ZSH
-BAK_DIR=$HOME/config-backup
+BAK_DIR=$HOME/.config-backups/
 
 # Helpful message if file isn't found
 skip () {
