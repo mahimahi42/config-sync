@@ -2,7 +2,7 @@
 # ZSH Configuration File
 # Author: Bryce Davis
 # Created: May 30, 2014
-# Updated: June 2, 2014
+# Updated: July 17, 2014
 # License: MIT
 #######################
 
