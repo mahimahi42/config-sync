@@ -17,3 +17,4 @@ alias gitc="git commit -anm"
 
 # Exports
 export EDITOR="vim"
+export TMOUT=0
